@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"fmt"
-	"go-rds-kit/config"
+	"github.com/wangxin529/go-rds-kit/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

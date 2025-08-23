@@ -1,4 +1,4 @@
-# GO-RDS-KIT
+# github.com/wangxin529/go-rds-kit
 
 用于 mysql 和 redis的统一 封装
 
@@ -6,7 +6,7 @@
 
 ### 1. 引入依赖
 ```shell
-go get https://github.com/wangxin529/go-rds-kit
+go get github.com/wangxin529/github.com/wangxin529/go-rds-kit
 ```
 
 ### 2. 配置
@@ -33,15 +33,15 @@ type Mysql struct {
 ```go
 
 type Memory struct {
-Type  CacheType `json:"type"` // 缓存类型 支持 memory 和 redis 两种
-Redis *Redis    `json:"redis,optional"`
+    Type  CacheType `json:"type"` // 缓存类型 支持 memory 和 redis 两种
+    Redis *Redis    `json:"redis,optional"`
 }
 type Redis struct {
-Addr             []string `json:"addr"` //redis 地址 一个为单点Redis 一个为集群Redis 多个地址为哨兵 Redis 
-Password         string   `json:"password"`
-MasterName       string   `json:"masterName"` // 哨兵模式参数
-SentinelPassword string   `json:"sentinelPassword"` // 哨兵模式参数
-DB               int      `json:"db"`
+    Addr             []string `json:"addr"` //redis 地址 一个为单点Redis 一个为集群Redis 多个地址为哨兵 Redis 
+    Password         string   `json:"password"`
+    MasterName       string   `json:"masterName"` // 哨兵模式参数
+    SentinelPassword string   `json:"sentinelPassword"` // 哨兵模式参数
+    DB               int      `json:"db"`
 }
 
 ```
@@ -80,7 +80,14 @@ func NewUserModel(db *gorm.DB) *UserModel {
 
 func main(){
 
-	db := mysql.NewMysql(config.Mysql{}, nil)
+	db := mysql.NewMysql(config.Mysql{
+        Database: "database",
+        Host:     "127.0.0.1",
+        Passwd:   "11111",
+        Port:     3306,
+        User:     "22222",
+        Logger:   true,
+}, nil)
 	um := NewUserModel(db)
 	user := &User{
 		Name: "test",

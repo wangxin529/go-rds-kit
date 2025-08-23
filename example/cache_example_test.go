@@ -1,8 +1,8 @@
 package example
 
 import (
-	"go-rds-kit/cache"
-	"go-rds-kit/config"
+	"github.com/wangxin529/go-rds-kit/cache"
+	"github.com/wangxin529/go-rds-kit/config"
 	"testing"
 )
 

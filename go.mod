@@ -1,4 +1,4 @@
-module go-rds-kit
+module github.com/wangxin529/go-rds-kit
 
 go 1.23
 

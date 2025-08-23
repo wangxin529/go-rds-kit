@@ -2,10 +2,10 @@ package example
 
 import (
 	"fmt"
-	"go-rds-kit/config"
-	"go-rds-kit/meta"
-	"go-rds-kit/mysql"
-	"go-rds-kit/types"
+	"github.com/wangxin529/go-rds-kit/config"
+	"github.com/wangxin529/go-rds-kit/meta"
+	"github.com/wangxin529/go-rds-kit/mysql"
+	"github.com/wangxin529/go-rds-kit/types"
 	"gorm.io/gorm"
 	"testing"
 )

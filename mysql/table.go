@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"fmt"
-	"go-rds-kit/meta"
+	"github.com/wangxin529/go-rds-kit/meta"
 	"gorm.io/gorm"
 	"time"
 )

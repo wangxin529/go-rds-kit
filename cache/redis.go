@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/pkg/errors"
 	"github.com/redis/go-redis/v9"
-	"go-rds-kit/config"
+	"github.com/wangxin529/go-rds-kit/config"
 	"time"
 )
 
