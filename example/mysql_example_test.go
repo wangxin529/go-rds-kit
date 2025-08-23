@@ -56,12 +56,22 @@ func Test_Sql(t *testing.T) {
 	})
 	fmt.Println(user_info, err)
 
-	users, count, err := um.List(meta.ListOption{
+	listOption := meta.ListOption{
 		Page: &meta.Page{
 			Page:     1,
 			PageSize: 10,
 		},
-	})
+	}
+
+	var (
+		id   int    = 3
+		name string = "name"
+	)
+
+	listOption.AddToCondition("id", &id)
+	listOption.AddToCondition("name", &name)
+	listOption.AddToCondition("age", nil) // 无效
+	users, count, err := um.List(listOption)
 
 	fmt.Println(users, count, err)
 

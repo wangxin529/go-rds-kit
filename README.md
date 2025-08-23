@@ -49,6 +49,8 @@ DB               int      `json:"db"`
 ## 3.使用说明 
 
 ### 3.1. mysql 使用
+#### 详情可参考： example/mysql_example_test.go
+
 ```go
 
 const (
@@ -126,10 +128,11 @@ func main(){
 	fmt.Println(aggregate, users2, err)
 }
 
-
 ```
 
 ### 3.2 缓存使用
+
+#### 详情可参考： example/cache_example_test.go
 ```go
 func NewCache(conf *config.Memory) cache.Cache {
 
