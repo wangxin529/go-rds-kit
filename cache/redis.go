@@ -12,7 +12,6 @@ import (
 
 type redisCache struct {
 	*redis.Client
-	CacheOperate
 }
 
 func NewRedisCache(conf *config.Redis) Cache {
@@ -44,7 +43,6 @@ func NewRedisCache(conf *config.Redis) Cache {
 	fmt.Println("redis int success!")
 	return &redisCache{
 		client,
-		cacheOperate,
 	}
 }
 

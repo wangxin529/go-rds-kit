@@ -8,13 +8,11 @@ import (
 
 type memoryCache struct {
 	cache.Cache
-	CacheOperate
 }
 
 func NewMemoryCache() Cache {
 	return &memoryCache{
 		*cache.New(5*time.Minute, 10*time.Minute),
-		cacheOperate,
 	}
 }
 
