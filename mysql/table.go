@@ -15,6 +15,7 @@ type TableOperate[T any] interface {
 	ListAggregate(option meta.ListOption, out interface{}) (count int64, err error)
 	Get(option meta.GetOption) (res *T, err error)
 	Count(option meta.CountOption) (int64, error)
+	Creates(data []*T) error
 	Copy(db *gorm.DB) TableOperate[T]
 	//Transaction(f func(tx *gorm.DB) error) error
 }

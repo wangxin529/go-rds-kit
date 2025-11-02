@@ -14,7 +14,7 @@ func NewCache(conf *config.Memory) cache.Cache {
 func Test_Redis(t *testing.T) {
 
 	//1. 内存
-
+	
 	memory := NewCache(&config.Memory{
 		Type: config.CacheMemoryType,
 	})
